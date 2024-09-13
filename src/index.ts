@@ -1,6 +1,6 @@
 import { defineEventHandler, fromNodeMiddleware, toWebRequest } from "h3";
 
-type AppType = "express" | "fastify" | "hono";
+type AppType = "express" | "fastify" | "hono" | "koa";
 
 /**
  * @example
@@ -17,13 +17,15 @@ type AppType = "express" | "fastify" | "hono";
 export function appToEvent(app: any, type: AppType) {
     if (typeof type !== "string") {
         throw new Error(
-            `type is required and is either 'express', 'fastify' or 'hono'`,
+            `type is required and is either 'express', 'fastify', 'hono' or 'koa'`,
         );
     }
 
     switch (type) {
         case "express":
             return fromNodeMiddleware(app);
+        case "koa":
+            return fromNodeMiddleware(app.callback());
         case "fastify":
             return defineEventHandler(async (event) => {
                 await app.ready();
@@ -37,7 +39,7 @@ export function appToEvent(app: any, type: AppType) {
             });
         default:
             throw new Error(
-                `The type can only be 'express', 'fastify' or 'hono'`,
+                `The type can only be 'express', 'fastify', 'hono' or 'koa'`,
             );
     }
 }
