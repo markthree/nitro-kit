@@ -1,0 +1,53 @@
+{
+  "version": "0.0.1",
+  "name": "nitro-kit",
+  "description": "simple kit for nitro",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markthree/nitro-kit.git"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "prepublish": "pnpm run build",
+    "release": "bumpp --commit --push --tag && npm publish"
+  },
+  "keywords": [
+    "lib",
+    "tool",
+    "node",
+    "utils"
+  ],
+  "author": {
+    "name": "markthree",
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/markthree"
+  },
+  "bugs": {
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/markthree/nitro-kit/issues"
+  },
+  "devDependencies": {
+    "bumpp": "^9.5.2",
+    "h3": "^1.12.0",
+    "nitropack": "^2.9.7",
+    "typescript": "^5.5.4",
+    "unbuild": "^2.0.0"
+  },
+  "peerDependencies": {
+    "nitropack": ">=2.0.0"
+  }
+}
