@@ -1,4 +1,4 @@
-# nitro-kit
+# nitro-unkit
 
 simple kit for nitro
 
@@ -7,14 +7,14 @@ simple kit for nitro
 ## setup
 
 ```shell
-npm i nitro-kit -D
+npm i nitro-unkit -D
 ```
 
 ### appToEvent
 
 ```ts
 // in nitro middleware
-import { appToEvent } from "nitro-kit";
+import { appToEvent } from "nitro-unkit";
 
 // some express logic
 

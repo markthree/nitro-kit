@@ -6,7 +6,7 @@ type AppType = "express" | "fastify" | "hono";
  * @example
  * ```ts
  * // in nitro middleware
- * import { appToEvent } from "nitro-kit"
+ * import { appToEvent } from "nitro-unkit"
  *
  * // some express logic
  *

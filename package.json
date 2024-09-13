@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "name": "nitro-kit",
+  "name": "nitro-unkit",
   "description": "simple kit for nitro",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -8,7 +8,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/markthree/nitro-kit.git"
+    "url": "git+https://github.com/markthree/nitro-unkit.git"
   },
   "exports": {
     ".": {
@@ -39,7 +39,7 @@
   },
   "bugs": {
     "email": "1801982702@qq.com",
-    "url": "https://github.com/markthree/nitro-kit/issues"
+    "url": "https://github.com/markthree/nitro-unkit/issues"
   },
   "devDependencies": {
     "bumpp": "^9.5.2",
